@@ -110,6 +110,7 @@
 
 .blog:hover .bod::after{
 display: none;
+transition: all .5s ease-in;
 }
 
 .gym::after {
@@ -145,6 +146,7 @@ display: none;
     color: white;
     position: relative;
     display: inline-block;
+    transition: all .5s ease-in;
 }
 
 .blog img {
@@ -157,14 +159,11 @@ display: none;
 
 }
 
-/* .blog:hover .bod {
-    border: none !important;
 
-} */
 
 .blog:hover {
     background-color: #1face1 !important;
-    /* padding-bottom: 2rem; */
+    transition: all .5s ease-in;
 }
 
 .hap::after {
@@ -247,6 +246,7 @@ display: none;
 } 
 .img{
     border: 10px solid #1face1;
+    transition: .65s ease-in-out;
 }
 
 .img:hover{
@@ -266,6 +266,7 @@ display: none;
     margin-left: 34px; 
     margin-top: -56px;
     opacity: 0;
+    transition: .65s ease-in-out;
 }
 
 .img h2 span{
@@ -273,10 +274,50 @@ display: none;
     font-size: 38px;
 }
 
-.links{
-    top: 50%;
-    left: 50%;
+ .links{
+    margin-top: -11rem; 
+    width: 40px;
+   margin-left: 8rem;
+   position: absolute;
+   z-index: 2;
+   display: none;
+} 
+
+.slide2:hover .links{
+    display: block;
+    transition: .3s all;
+   
 }
+
+.slide2:before{
+    content: "";
+    background-color: #0f5b77;;
+    opacity: 0.7;
+    height: 17.8rem;
+    width: 17.8rem;
+    position: absolute;
+    transition: .3s all;
+    z-index: 1;
+
+    -webkit-transform: scale(0) translate(-50%, -50%);
+    transform: scale(0) translate(-50%, -50%);
+    -webkit-transition: .3s all;
+    transition: .3s all;
+    
+}
+.slide2:hover:before{
+    background: #0f5b77;
+    content: "";
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(1.1) translate(-50%, -50%);
+    transform: scale(1.1) translate(-50%, -50%);
+    -webkit-transition: .3s all;
+    transition: .3s all;
+}
+    
+
 @media (max-width: 767.98px) {
     .img-w {
         width: 379px;
@@ -305,6 +346,33 @@ display: none;
     .respbu {
         margin-left: 6rem;
     }
+    .bod::after{
+        width: 23.7rem;
+    }
+    .gym::after {
+        margin-left: -7rem;
+    }
+    .ab::after {
+        margin-left: -12rem;
+    }
+    .content{
+        margin-top: 3.5rem!important;
+    }
+    .link{
+        margin-top: 2rem;
+    }
+    .get{
+        margin-top: 2rem;
+    }
+    /* .post{
+        width: 378px!important;
+    } */
+    .img{
+        margin-top: 3rem;
+    }
+    .recent{
+        margin-top: 2rem;
+    }
 }
 
 
@@ -321,4 +389,9 @@ display: none;
     .respbu {
         margin-left: 16rem;
     }
+    .bod::after {
+        height: 31.5rem;
+         width: 44rem;
+    }
+ 
 }
